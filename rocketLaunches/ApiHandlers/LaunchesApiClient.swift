@@ -35,11 +35,11 @@ class LaunchesApiClient {
 //        task.resume()
 //
 //    }
-    
+//
     func fetchLaunchesFromAPI() async throws -> [Launch]{
         let url = URL(string: "https://ll.thespacedevs.com/2.2.0/launch/upcoming/")!
         let (data, _) = try await URLSession.shared.data(from:url)
-        
+
         let decoded = try JSONDecoder().decode(AllLaunches.self, from: data)
         return decoded.results
     }

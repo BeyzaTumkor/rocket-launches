@@ -18,7 +18,7 @@ class RocketLaunchesViewController: UIViewController {
             do{
                 let launches = try await LaunchesApiClient().fetchLaunchesFromAPI()
                 print(launches)
-                //LaunchesView(launches: launches)
+                LaunchesView(launches: launches)
             }catch{
                 print(error)
             }
