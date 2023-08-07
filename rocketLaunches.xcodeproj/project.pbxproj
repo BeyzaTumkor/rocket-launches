@@ -14,8 +14,9 @@
 		6D0208E22A7D789A00CAC1EC /* rocketLaunchesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0208E12A7D789A00CAC1EC /* rocketLaunchesUITestsLaunchTests.swift */; };
 		6D0208F02A7EA27600CAC1EC /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0208EF2A7EA27600CAC1EC /* Launch.swift */; };
 		6D0208F42A7EBDBE00CAC1EC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0208F32A7EBDBE00CAC1EC /* CardView.swift */; };
+		6D8DC9332A7FE97500CDE37B /* LaunchesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8DC9322A7FE97500CDE37B /* LaunchesApiClient.swift */; };
 		6DAE890F2A7EE8240060B4D5 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE890E2A7EE8240060B4D5 /* LaunchesView.swift */; };
-		6DAE89112A7EECC20060B4D5 /* RocketLaunchesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE89102A7EECC20060B4D5 /* RocketLaunchesApp.swift */; };
+		6DAE89112A7EECC20060B4D5 /* RocketLaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE89102A7EECC20060B4D5 /* RocketLaunchesViewController.swift */; };
 		6DAE89132A7EF04D0060B4D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE89122A7EF04D0060B4D5 /* AppDelegate.swift */; };
 		6DAE89152A7EF4EE0060B4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DAE89142A7EF4ED0060B4D5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -49,8 +50,9 @@
 		6D0208E12A7D789A00CAC1EC /* rocketLaunchesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rocketLaunchesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6D0208EF2A7EA27600CAC1EC /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		6D0208F32A7EBDBE00CAC1EC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6D8DC9322A7FE97500CDE37B /* LaunchesApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesApiClient.swift; sourceTree = "<group>"; };
 		6DAE890E2A7EE8240060B4D5 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
-		6DAE89102A7EECC20060B4D5 /* RocketLaunchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchesApp.swift; sourceTree = "<group>"; };
+		6DAE89102A7EECC20060B4D5 /* RocketLaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchesViewController.swift; sourceTree = "<group>"; };
 		6DAE89122A7EF04D0060B4D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DAE89142A7EF4ED0060B4D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,13 +105,13 @@
 		6D0208BD2A7D789800CAC1EC /* rocketLaunches */ = {
 			isa = PBXGroup;
 			children = (
+				6D8DC9352A80000800CDE37B /* Views */,
+				6D8DC9342A7FFFEB00CDE37B /* ApiHandlers */,
 				6D0208EE2A7EA23400CAC1EC /* Models */,
 				6D0208C02A7D789800CAC1EC /* SceneDelegate.swift */,
-				6D0208F32A7EBDBE00CAC1EC /* CardView.swift */,
 				6D0208C72A7D789A00CAC1EC /* Assets.xcassets */,
 				6D0208CC2A7D789A00CAC1EC /* Info.plist */,
-				6DAE890E2A7EE8240060B4D5 /* LaunchesView.swift */,
-				6DAE89102A7EECC20060B4D5 /* RocketLaunchesApp.swift */,
+				6DAE89102A7EECC20060B4D5 /* RocketLaunchesViewController.swift */,
 				6DAE89122A7EF04D0060B4D5 /* AppDelegate.swift */,
 				6DAE89142A7EF4ED0060B4D5 /* Main.storyboard */,
 			);
@@ -139,6 +141,23 @@
 				6D0208EF2A7EA27600CAC1EC /* Launch.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6D8DC9342A7FFFEB00CDE37B /* ApiHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DC9322A7FE97500CDE37B /* LaunchesApiClient.swift */,
+			);
+			path = ApiHandlers;
+			sourceTree = "<group>";
+		};
+		6D8DC9352A80000800CDE37B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DAE890E2A7EE8240060B4D5 /* LaunchesView.swift */,
+				6D0208F32A7EBDBE00CAC1EC /* CardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +292,10 @@
 			files = (
 				6DAE890F2A7EE8240060B4D5 /* LaunchesView.swift in Sources */,
 				6D0208F02A7EA27600CAC1EC /* Launch.swift in Sources */,
+				6D8DC9332A7FE97500CDE37B /* LaunchesApiClient.swift in Sources */,
 				6D0208F42A7EBDBE00CAC1EC /* CardView.swift in Sources */,
 				6DAE89132A7EF04D0060B4D5 /* AppDelegate.swift in Sources */,
-				6DAE89112A7EECC20060B4D5 /* RocketLaunchesApp.swift in Sources */,
+				6DAE89112A7EECC20060B4D5 /* RocketLaunchesViewController.swift in Sources */,
 				6D0208C12A7D789800CAC1EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

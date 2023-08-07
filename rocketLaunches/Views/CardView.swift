@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct CardView: View {
+    
+    
     let launch : Launch
     var body : some View {
         
         VStack(alignment: .leading){
-            Text(launch.rocketName)
+            Text(launch.name)
                 .font(.headline)
             Spacer()
             HStack {
                 
-                Text(launch.location)
+                //Text(launch.location)
                 Spacer()
-                Label("\(launch.launchWindowStartTime)", systemImage: "clock")
+                //Label("\(launch.launchWindowStartTime)", systemImage: "clock")
             }
             
         }
@@ -28,11 +30,12 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews : PreviewProvider {
-    static var launch = Launch.SampleData[0]
-    static var previews: some View {
-        CardView(launch: launch)
-            
-            .previewLayout(.fixed(width: 400, height: 100))
-    }
-}
+//struct CardView_Previews : PreviewProvider {
+//
+//    //static var launch = Launch.SampleData[0]
+//    static var previews: some View {
+//        CardView(launch: launch)
+//
+//            .previewLayout(.fixed(width: 400, height: 100))
+//    }
+//}
