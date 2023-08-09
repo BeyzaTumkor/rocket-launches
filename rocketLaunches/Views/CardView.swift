@@ -7,8 +7,9 @@
 
 import SwiftUI
 
+
+
 struct CardView: View {
-    
     
     let launch : Launch
     var body : some View {
@@ -19,9 +20,9 @@ struct CardView: View {
             Spacer()
             HStack {
                 
-                //Text(launch.location)
+                Text(launch.windowStart ?? "No start Time")
                 Spacer()
-                //Label("\(launch.launchWindowStartTime)", systemImage: "clock")
+//                Label("\(launch.windowStart)", systemImage: "clock")
             }
             
         }

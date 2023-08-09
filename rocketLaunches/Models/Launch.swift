@@ -16,7 +16,7 @@ struct Launch {
     var url: String?
     var slug: String?
     var name: String
-    //var status: KeyValuePairs<Any, Any>?
+    //var status: Status
     var lastUpdated: String?
     var net: String?
     var windowEnd: String?
@@ -45,13 +45,33 @@ struct Launch {
     var agencyLaunchAttemptCountYear: Int?
     
 }
-struct Wrapper {
-    let items : [Launch]
+
+struct Status {
+    var id: String
+    var name: String
+    var abbrev: String
+    var description: String
 }
+
+//extension Status: Decodable,Identifiable {
+//    enum CodingKeys : String, CodingKey {
+//        case id = "id"
+//        case name = "case"
+//        case abbrev = "abbrev"
+//        case description = "description"
+//    }
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        self.id = try values.decodeIfPresent(String.self, forKey: .id)!
+//        self.name = try values.decodeIfPresent(String.self, forKey: .name)!
+//        self.abbrev = try values.decodeIfPresent(String.self, forKey: .abbrev)!
+//        self.description = try values.decodeIfPresent(String.self, forKey: .description)!
+//    }
+//}
 
 extension Launch: Decodable, Identifiable {
     enum CodingKeys: String, CodingKey {
-        case id
+        case id = "id"
         case url = "url"
         case slug = "slug"
         case name = "name"
@@ -90,6 +110,7 @@ extension Launch: Decodable, Identifiable {
         self.url = try values.decodeIfPresent(String.self, forKey: .url)
         self.slug = try values.decodeIfPresent(String.self, forKey: .slug)
         self.name = try values.decodeIfPresent(String.self, forKey: .name)!
+        //self.status = try values.decodeIfPresent(Status.self, forKey: .status)!
         self.lastUpdated = try values.decodeIfPresent(String.self, forKey: .lastUpdated)
         self.net = try values.decodeIfPresent(String.self, forKey: .net)
         self.windowEnd = try values.decodeIfPresent(String.self, forKey: .windowEnd)
@@ -118,6 +139,10 @@ extension Launch: Decodable, Identifiable {
 extension AllLaunches: Decodable {
     enum CodingKeys: String, CodingKey{
         case results = "results"
+    }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.results = try values.decodeIfPresent([Launch].self, forKey: .results)!
     }
 }
 
